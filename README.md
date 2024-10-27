@@ -4,4 +4,5 @@ Esse desafio foi proposto como um teste para a vaga de Engenheiro de Dados da Li
 ## Execução do projeto
 Para executar a extração de dados inicial, basta baixar o .exe dentro da pasta "dist"
 
+## Dados
 Autor: Riquelme Lopes da Silva
