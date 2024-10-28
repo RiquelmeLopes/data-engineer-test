@@ -1,0 +1,9 @@
+runtime: python39
+entrypoint: gunicorn -b :$PORT app:app
+
+env_variables:
+  GOOGLE_APPLICATION_CREDENTIALS: "D:/Estudo/gcp-credentials.json"
+
+handlers:
+  - url: /.*
+    script: auto
