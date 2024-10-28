@@ -8,18 +8,18 @@ client = bigquery.Client()
 def search_articles():
     keyword = request.args.get('keyword')
     
-    # Verificar se a keyword foi fornecida
+    ## Verificar se a keyword foi fornecida
     if not keyword:
         return jsonify({"error": "É necessário uma keyword."}), 400
 
-    # Definir a query para fazer a busca usando a keyword
+    ## Definir a query para fazer a busca usando a keyword
     query = f"""
     SELECT headline, author, url, text
     FROM `xenon-pager-439914-k7.data_eng_test.articles_table`
     WHERE LOWER(text) LIKE '%{keyword.lower()}%'
     """
 
-    # Executar a consulta
+    ## Executar a consulta
     query_job = client.query(query)
     results = query_job.result()
 
