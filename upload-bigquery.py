@@ -25,5 +25,5 @@ def upload_to_bigquery(json_file_path, dataset_id, table_id):
     else:
         print("Erro ao carregar os dados:", errors)
 
-
+# Executar 
 upload_to_bigquery('articles.json', 'data_eng_test', 'articles_table')
